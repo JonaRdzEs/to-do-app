@@ -8,4 +8,6 @@ export interface TodoStore {
   todos: Todo[];
   toggleCheckTodo: (id: string) => void;
   setTodos: (value: Todo) => void;
+  deleteTodo: (id: string) => void;
+  clearCompleted: () => void;
 }

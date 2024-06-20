@@ -1,10 +1,20 @@
 import type { FormEvent } from "react";
+import { useTodoStore } from "../store/todoStore";
+
+const randomId = (length = 6) => Math.random().toString(36).substring(2, length+2);
 
 function AddTodo() {
+  const { setTodos } = useTodoStore((state) => state);
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     if (!formData.get("todo")) return;
+    setTodos({
+      id: randomId(),
+      name: formData.get("todo")!.toString(),
+      completed: false,
+    });
     event.currentTarget.reset();
   };
 

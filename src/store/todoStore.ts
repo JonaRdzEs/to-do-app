@@ -13,7 +13,13 @@ export const useTodoStore = create<TodoStore>()(persist(
         return { todos };
       }),
     setTodos: (todo: Todo) =>
-      set(() => ({ todos: [...get().todos, todo ] }))
+      set(() => ({ todos: [...get().todos, todo ] })),
+    deleteTodo: (id) => 
+      set((state) => {
+        const todos = state.todos.filter((todo) => todo.id !== id);
+        return { todos };
+      }),
+    clearCompleted: () => set(() => ({ todos:  get().todos.filter((todo) => !todo.completed) })),
   }),
   {
     name: "todo-app-storage",
