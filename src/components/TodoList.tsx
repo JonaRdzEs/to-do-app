@@ -19,7 +19,7 @@ function TodoList({ filter }: Props) {
 
   return (
     todos.length > 0 && (
-      <ul className="bg-white flex flex-col w-10/12 mx-auto rounded-md mt-6">
+      <ul className="bg-white flex flex-col w-10/12 mx-auto rounded-md mt-6 shadow">
         {filteredTodos.map((todo) => (
           <TodoCard key={todo.id} {...todo} />
         ))}

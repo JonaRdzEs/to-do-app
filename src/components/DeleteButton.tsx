@@ -3,15 +3,16 @@ import { useTodoStore } from "../store/todoStore";
 
 interface Props {
   id: string;
+  todoName: string;
 }
 
-function DeleteButton({ id }: Props) {
+function DeleteButton({ id, todoName }: Props) {
   const { deleteTodo } = useTodoStore((state) => state);
 
   const handleClick = () => deleteTodo(id);
 
   return (
-    <button className="w-3 h-3" onClick={handleClick}>
+    <button aria-label={`Delete ${todoName}`} className="w-3 h-3 text-[#9394a5]" onClick={handleClick}>
       <Cross />
     </button>
   );
