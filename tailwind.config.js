@@ -27,6 +27,7 @@ export default {
     "./index.html",
     "./src/**/*.{jsx,tsx}",
   ],
+  darkMode: "selector",
   theme: {
     extend: {},
   },
