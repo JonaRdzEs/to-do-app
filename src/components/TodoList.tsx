@@ -19,12 +19,12 @@ function TodoList({ filter }: Props) {
 
   return (
     todos.length > 0 && (
-      <ul className="bg-white flex flex-col w-10/12 mx-auto rounded-md mt-6 shadow">
+      <ul className="bg-white dark:bg-vdd-blue flex flex-col w-10/12 mx-auto rounded-md mt-6 shadow">
         {filteredTodos.map((todo) => (
           <TodoCard key={todo.id} {...todo} />
         ))}
         <section className="flex justify-between items-center p-4">
-          <p className="text-[#9394a5]">{todos.filter((todo) => !todo.completed).length} items left</p>
+          <p className="text-light-dg-blue dark:text-dg-blue">{todos.filter((todo) => !todo.completed).length} items left</p>
           <ClearCompletedButton />
         </section>
       </ul>

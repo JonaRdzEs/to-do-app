@@ -12,7 +12,7 @@ function DeleteButton({ id, todoName }: Props) {
   const handleClick = () => deleteTodo(id);
 
   return (
-    <button aria-label={`Delete ${todoName}`} className="w-3 h-3 text-[#9394a5]" onClick={handleClick}>
+    <button aria-label={`Delete ${todoName}`} className="w-3 h-3 text-light-dg-blue dark:text-dg-blue" onClick={handleClick}>
       <Cross />
     </button>
   );

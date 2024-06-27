@@ -9,7 +9,7 @@ function App() {
   const [filter, setFilter] = useState(ALL);
 
   return (
-    <main className="bg-[#fafafa] min-h-dvh">
+    <main className="bg-vl-gray min-h-dvh dark:bg-vd-blue">
       <Header />
       <AddTodo />
       <TodoList filter={filter} />

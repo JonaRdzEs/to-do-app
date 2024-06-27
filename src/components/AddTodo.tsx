@@ -21,16 +21,16 @@ function AddTodo() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="-mt-24 bg-white w-10/12 mx-auto rounded-md h-12 max-w-md overflow-hidden flex justify-start items-stretch"
+      className="-mt-24 bg-white dark:bg-vdd-blue w-10/12 mx-auto rounded-md h-12 max-w-md overflow-hidden flex justify-start items-stretch"
     >
       <input
-        className="grow px-3"
+        className="grow px-3 bg-white dark:bg-vdd-blue"
         id="todo"
         aria-label="Todo name"
         name="todo"
         placeholder="Create a new todo..."
       />
-      <button aria-label="Add todo" className="w-12">
+      <button aria-label="Add todo" className="w-12 text-lg-blue dark:text-dg-blue">
         +
       </button>
     </form>

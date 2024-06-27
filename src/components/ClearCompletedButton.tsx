@@ -6,7 +6,7 @@ function ClearCompletedButton() {
   const handleClick = () => clearCompleted();
 
   return (
-    <button className="text-[#9394a5]" onClick={handleClick}>
+    <button className="text-light-dg-blue dark:text-dg-blue" onClick={handleClick}>
       Clear completed
     </button>
   );
