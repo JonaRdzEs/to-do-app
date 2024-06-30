@@ -12,8 +12,10 @@ export const useTodoStore = create<TodoStore>()(persist(
         );
         return { todos };
       }),
-    setTodos: (todo: Todo) =>
-      set(() => ({ todos: [...get().todos, todo ] })),
+    setTodos: (todos: Todo[]) =>
+      set(() => ({ todos })),
+    addTodo: (todo: Todo) =>
+      set(() => ({ todos: [...get().todos, todo] })),
     deleteTodo: (id) => 
       set((state) => {
         const todos = state.todos.filter((todo) => todo.id !== id);

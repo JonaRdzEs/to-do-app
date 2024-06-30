@@ -19,15 +19,17 @@ function TodoList({ filter }: Props) {
 
   return (
     todos.length > 0 && (
-      <ul className="bg-white dark:bg-vdd-blue flex flex-col w-10/12 mx-auto rounded-md mt-6 shadow">
-        {filteredTodos.map((todo) => (
-          <TodoCard key={todo.id} {...todo} />
-        ))}
+      <div className="bg-white dark:bg-vdd-blue w-full rounded-md mt-6 shadow">
+        <ul className=" flex flex-col">
+          {filteredTodos.map((todo, index) => (
+            <TodoCard key={todo.id} index={index} {...todo} />
+          ))}
+        </ul>
         <section className="flex justify-between items-center p-4">
           <p className="text-light-dg-blue dark:text-dg-blue">{todos.filter((todo) => !todo.completed).length} items left</p>
           <ClearCompletedButton />
         </section>
-      </ul>
+      </div>
     )
   );
 }
