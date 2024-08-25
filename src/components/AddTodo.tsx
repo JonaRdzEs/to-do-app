@@ -30,9 +30,6 @@ function AddTodo() {
         name="todo"
         placeholder="Create a new todo..."
       />
-      <button aria-label="Add todo" className="w-12 text-lg-blue dark:text-dg-blue">
-        +
-      </button>
     </form>
   );
 }

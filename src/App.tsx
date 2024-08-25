@@ -16,8 +16,12 @@ function App() {
       <div className="relative z-10 w-10/12 max-w-2xl mx-auto">
         <AddTodo />
         <TodoList filter={filter} />
-        {todos.length > 0 && <TodoFilters filter={filter} setFilter={setFilter} />}
-        <p className="mt-20 text-center text-light-dg-blue dark:text-dg-blue">Drag and drop to reorder list</p>
+        {todos.length > 0 && (
+          <>
+            <TodoFilters filter={filter} setFilter={setFilter} />
+            <p className="mt-20 text-center text-light-dg-blue dark:text-dg-blue">Drag and drop to reorder list</p>
+          </>
+        )}
       </div>
     </main>
   );
