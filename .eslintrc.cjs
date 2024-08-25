@@ -16,7 +16,6 @@ module.exports = {
     ],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "max-len": ["error", { "code": 120 }],
     "object-curly-spacing": ["error", "always"],
   },
 }
